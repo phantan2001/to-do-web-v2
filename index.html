@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+    <div class="header">
+        
+        <h2 class = "heading">Work hard with Hue Tre Trau <i class="fa-solid fa-poop"></i></h2>
+    </div>
+    <div class="container">
+        <hr>
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Task name:</label>
+                        <input type="text" class="form-control" id="task-name-input" placeholder="Enter task name"
+                            name="taskName">
+                        <!-- <div class="valid-feedback">Valid.</div> -->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group-date">
+                        <label class="control-label">Select the start date and time:</label>
+                        <input id="datepicker-start" type="text" class="form-control" value="" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group-date">
+                        <label class="control-label">Select the end date and time:</label>
+                        <input id="datepicker-end" type="text" class="form-control" value="" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Priority:</label>
+                        <select class="form-control" id="option" name="option">
+                            <option value="">--Choose--</option>
+                            <option value="important">Important</option>
+                            <option value="ordinary">Ordinary</option>
+                            <option value="unimportant">Unimportant</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Level of difficult:</label>
+                    <div class="form-group" id="level">
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="level" id="inlineRadio1" value="Hard" />
+                            <label class="form-check-label" for="inlineRadio1">Hard</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="level" id="inlineRadio2"
+                                value="Normal" />
+                            <label class="form-check-label" for="inlineRadio2">Normal</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="level" id="inlineRadio2" value="Easy" />
+                            <label class="form-check-label" for="inlineRadio2">Easy</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="btnSave" class="btn btn-primary blue-custom">Add Task</button>
+            <button type="button" id="btnDeleteAll" class="btn btn-danger red-custom">Delete All</button>
+            <div style="overflow-x:auto;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Task Name</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Priority</th>
+                            <th>Level</th>
+                            <th>Active</th>
+                        </tr>
+                    </thead>
+                    <tbody id="display">
+    
+                    </tbody>
+                </table>
+
+            </div>
+        </form>
+    </div>
+
+    <script src="./js/validate.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
