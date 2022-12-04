@@ -105,7 +105,7 @@ const editTask = id => {
 
     //cap nhat trang thai - isUpdate = true
     isUpdate = true;
-    saveButton.textContent = "Cập nhật";
+    saveButton.textContent = "Update";
     task_name.disabled = true;
     let boxes = document.getElementsByClassName('checkbox').length;
     function save() {	
