@@ -207,7 +207,7 @@ btnDeleteAll.addEventListener("click", function() {
             localStorage.removeItem("dstask", dstask[i]);
             
         }
-        // localStorage.clear();
+        localStorage.clear();
         
     }
     
